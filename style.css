@@ -20,4 +20,69 @@
 body {
     font-size: 12px;
     font-family: var(--kumbhSans);
+    background-image: linear-gradient(var(--softViolet), var(--softBlue));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  padding: 10px 0;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+h2:active {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card-img {
+  position: relative;
+  bottom: 50px;
+}
+
+.accordion {
+  padding: 20px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--lightGrayBlue);
+}
+
+.accordion-item h2 {
+  cursor: pointer;
+}
+
+.accordion-item p {
+  display: none;
+  padding: 10px;
+}
+
+.accordion-item.active p {
+  display: block;
 }
