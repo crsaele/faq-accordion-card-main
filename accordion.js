@@ -17,6 +17,7 @@ accordionItems.forEach((item) => {
     // If the accordion item is active, show the paragraph; otherwise, hide it
     if (item.classList.contains('active')) {
       paragraph.style.display = 'block';
+      paragraph.style.padding = '10px 0';
     } else {
       paragraph.style.display = 'none';
     }

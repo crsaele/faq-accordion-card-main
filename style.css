@@ -38,6 +38,12 @@ h1 {
 
 h2 {
   font-weight: 300;
+  font-size: 14px;
+}
+
+h2:hover {
+  cursor: pointer;
+  color: var(--softRed);
 }
 
 h2:active {
@@ -51,6 +57,7 @@ ul {
 
 p {
   display: none;
+  padding: 20px 0;
 }
 
 footer {
@@ -60,20 +67,25 @@ footer {
 .card {
   background-color: white;
   border-radius: 10px;
+  width: 330px;
 }
 
 .card-img {
   position: relative;
-  bottom: 50px;
+  width: 65%;
+  bottom: 85px;
+  left: 60px;
 }
 
 .accordion {
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .accordion-item {
   margin-bottom: 10px;
   border-bottom: 1px solid var(--lightGrayBlue);
+  transition: transform 0.3s ease; /* Adds a smooth (ease) transition */
 }
 
 .accordion-item h2 {
@@ -87,6 +99,10 @@ footer {
   display: none; /* Hide the icon by default */
   width: 6px; /* Set width for the icon */
   height: 6px; /* Set height for the icon */
+}
+
+.accordion-item.active {
+  transform: translateY(10px); /* Adjust this value as needed */
 }
 
 .accordion-item.active .icon-arrow {
