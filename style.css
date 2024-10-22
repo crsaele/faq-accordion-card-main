@@ -14,18 +14,18 @@
   --lightGrayBlue: hsl(240, 5%, 91%);
 
   /* TYPOGRAPHY */
-  --kumbhSans: 'Kumbh Sans', sans-serif;
+  --kumbhSans: "Kumbh Sans", sans-serif;
 }
 
 body {
-    font-size: 12px;
-    font-family: var(--kumbhSans);
-    background-image: linear-gradient(var(--softViolet), var(--softBlue));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-size: 12px;
+  font-family: var(--kumbhSans);
+  background-image: linear-gradient(var(--softViolet), var(--softBlue));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 header {
@@ -46,6 +46,7 @@ h2:active {
 
 ul {
   list-style-type: none;
+  margin: 0;
 }
 
 p {
@@ -71,16 +72,34 @@ footer {
 }
 
 .accordion-item {
+  margin-bottom: 10px;
   border-bottom: 1px solid var(--lightGrayBlue);
 }
 
 .accordion-item h2 {
   cursor: pointer;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+}
+
+.accordion-item .icon-arrow {
+  margin-left: auto; /* Push the icon to the right */
+  display: none; /* Hide the icon by default */
+  width: 6px; /* Set width for the icon */
+  height: 6px; /* Set height for the icon */
+}
+
+.accordion-item.active .icon-arrow {
+  display: block; /* Show the icon when active */
 }
 
 .accordion-item p {
   display: none;
   padding: 10px;
+}
+
+.accordion-item.active h2 {
+  font-weight: 700; /* Make the font bolder when active */
 }
 
 .accordion-item.active p {
